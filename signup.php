@@ -58,18 +58,16 @@
                 <?php 
                 if (isset($_SESSION['invalid_signup'])) {
                     echo '<p class="red"> Invalid Signup try. Please try again later.</p>';
-                }elseif (isset($_SESSION['invalid_email']) {
-                    echo '<p class="red"> Invalid Email.</p>';
-                }elseif (isset($_SESSION['usertaken']) {
+                }elseif (isset($_SESSION['usertaken'])) {
                     echo '<p class="red"> User Alredy Registered. Please <a href="index.html">Login</p></a>';
-                }elseif (isset($_SESSION['error']) {
+                }elseif (isset($_SESSION['error'])) {
                     echo '<p class="red">Signup Error. Please try again later.</p>';
                 }
                 ?>
                 <div>
                     <button id="btn-signup" class="btn_login" type="submit" value="submit" name="submit">Sign Up</button>
                 </div>
-                <p>Alredy have an <a href="index.php">Account ?</a></p>
+                <p>Alredy have an <a href="login.php">Account ?</a></p>
 
             </div>
         </form>
