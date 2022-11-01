@@ -15,16 +15,16 @@ if (isset($_POST['submit'])){
 		$resultCheck = mysqli_num_rows($result);
 		
 		if($resultCheck < 1){
-			header("Location: ../login.php");
-			$_SESSION['incorrect'] = "Uname_incorrect";
+			header("Location: ../login.php?Username_incorrect");
+			$_SESSION['Uname_incorrect'] = "Uname_incorrect";
 			exit();
 		} else{
 			if ($row = mysqli_fetch_assoc($result)){
 				//de hashed pwd
 				$hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
 				if($hashedPwdCheck == false){
-					header("Location: ../login_erorr.php");
-					$_SESSION['incorrect']= "pwd_incorrect";
+					header("Location: ../login.php?pwd_incorrect");
+					$_SESSION['pwd_incorrect']= "pwd_incorrect";
 					exit();
 				} elseif($hashedPwdCheck == true){
 					//log in user 

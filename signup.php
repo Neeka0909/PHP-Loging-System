@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +54,18 @@
                     <label for="repwd">ReEnter Password </label>
                     <input class="pwd" type="password" id="repwd" placeholder="ReEnter your Password here" name="repwd"  autofocus required>
                 </div>
-                <p class="red puff-in-center" id="msg"></p>
+                <p class="red" id="msg"></p>
+                <?php 
+                if (isset($_SESSION['invalid_signup'])) {
+                    echo '<p class="red"> Invalid Signup try. Please try again later.</p>';
+                }elseif (isset($_SESSION['invalid_email']) {
+                    echo '<p class="red"> Invalid Email.</p>';
+                }elseif (isset($_SESSION['usertaken']) {
+                    echo '<p class="red"> User Alredy Registered. Please <a href="index.html">Login</p></a>';
+                }elseif (isset($_SESSION['error']) {
+                    echo '<p class="red">Signup Error. Please try again later.</p>';
+                }
+                ?>
                 <div>
                     <button id="btn-signup" class="btn_login" type="submit" value="submit" name="submit">Sign Up</button>
                 </div>

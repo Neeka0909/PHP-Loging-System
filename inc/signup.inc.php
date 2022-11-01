@@ -20,14 +20,13 @@ session_start();
 			 //check input feild are valid
 			if(!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last)){
 				header("Location: ../signup.php?signup=invalid");
-				
-					
+				$_SESSION['invalid_signup'] = "invalid_signup";
 				exit();
 			} else{
 				//check email are valid
 				if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
 					header("Location: ../signup.php?signup=invalidemail");
-					
+                    $_SESSION['invalid_email'] = "Invalid_emai";
 					exit();
 				}else{
 					$sql = "SELECT * FROM users WHERE user_email = '$email'";
@@ -36,6 +35,7 @@ session_start();
 					
 						if($resultCheck > 0){
 							header("Location: ../signup.php?signup=usertaken");
+                            $_SESSION['usertaken'] = "usertaken";
 							exit();
 							
 						}else{
@@ -65,5 +65,6 @@ session_start();
 		
 	}else{
 		header("Location: ../signup.php?error");
+        $_SESSION['error'] = "true";
 		exit();
 	}

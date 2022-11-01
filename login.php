@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +29,14 @@
                     <label for="upwd">Password </label>
                     <input class="pwd" type="password" id="upwd" placeholder="Enter your Password here" name="upwd"  autofocus required>
                 </div>
+                <?php 
+                    if (isset($_SESSION['Uname_incorrect'])) {
+                       echo '<p class = "red">Enterd Username was incorrect</p>';
+                    }elseif (isset($_SESSION['pwd_incorrect'])) {
+                        echo '<p class = "red">Enterd password was incorrect</p>';
+                    }
+                ?>
+                
                 <div>
                     <button class="btn_login shadow-drop-2-center" type="submit" value="submit" name="submit">Login</button>
                 </div>
