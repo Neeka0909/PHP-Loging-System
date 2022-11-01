@@ -69,7 +69,7 @@
                 <div>
                     <button id="btn-signup" class="btn_login" type="submit" value="submit" name="submit">Sign Up</button>
                 </div>
-                <p>Alredy have an <a href="index.html">Account ?</a></p>
+                <p>Alredy have an <a href="index.php">Account ?</a></p>
 
             </div>
         </form>

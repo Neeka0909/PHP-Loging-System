@@ -41,7 +41,7 @@
                     <button class="btn_login shadow-drop-2-center" type="submit" value="submit" name="submit">Login</button>
                 </div>
                 <a href="">Forget Password</a>
-                <p>Create an <a href="signup.html">Account ?</a></p>
+                <p>Create an <a href="signup.php">Account ?</a></p>
 
             </div>
         </form>
