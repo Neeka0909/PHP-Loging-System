@@ -85,6 +85,7 @@ input {
 
 label {
     padding: 10px;
+    font-weight: 600;
 }
 
 
@@ -159,4 +160,15 @@ button {
               box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     }
   }
+  
+
+/* Signup Page */
+.red {
+    color: rgb(148, 49, 49);
+}
+
+.pos {
+  height: calc(100vh - 50px);
+}
+
   
