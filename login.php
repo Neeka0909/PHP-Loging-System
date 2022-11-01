@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Css style file -->
-    <link rel="stylesheet" href="/src/main.css">
+    <link rel="stylesheet" href="src/main.css">
 
     <title>Pure PHP Loging System</title>
 
-
+  
 
 </head>
 <body>
 
     <div class="container">
         <!-- Loging Form -->
-        <form action="" method="post" name="login">
+        <form action="inc/login.inc.php" method="POST" name="login">
             <div class="forminside">
                 <h2>Member Login </h2>
                 <div class="box "> 
@@ -28,7 +28,7 @@
                     <input class="pwd" type="password" id="upwd" placeholder="Enter your Password here" name="upwd"  autofocus required>
                 </div>
                 <div>
-                    <button class="btn_login shadow-drop-2-center" type="submit" value="Submit">Login</button>
+                    <button class="btn_login shadow-drop-2-center" type="submit" value="submit" name="submit">Login</button>
                 </div>
                 <a href="">Forget Password</a>
                 <p>Create an <a href="signup.html">Account ?</a></p>

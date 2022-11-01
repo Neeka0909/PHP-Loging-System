@@ -1,3 +1,4 @@
+/* login page */
 body{
     background-color: #212121;
     color: aliceblue;
@@ -171,4 +172,24 @@ button {
   height: calc(100vh - 50px);
 }
 
-  
+/* index page */
+.page-head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #515151;
+    
+    border-radius: 50px;
+}
+
+.h-container {
+    display: flex;
+    background-color: beige;
+    color: #515151;
+    padding: 25px;
+    margin: 30px;
+    border-radius: 15px;
+}

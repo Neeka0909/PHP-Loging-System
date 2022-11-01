@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Css style file -->
-    <link rel="stylesheet" href="/src/main.css">
+    <link rel="stylesheet" href="src/main.css">
 
     <title>Pure PHP Loging System</title>
 
@@ -16,9 +16,11 @@
             let y = document.getElementById("repwd").value;
             if (x !== y) {
                 document.getElementById("msg").innerHTML = "Password dosent match";
+                document.getElementById("btn-signup").disabled = true;
                 return false;
             }else {
                 document.getElementById("msg").innerHTML = "";
+                document.getElementById("btn-signup").disabled = false;
             }
         }
         setInterval(pwdcheck,1000);
@@ -28,7 +30,7 @@
 
     <div class="pos container">
         <!-- Loging Form -->
-        <form action="" method="post" name="signup">
+        <form role="form" action="inc/signup.inc.php" method="POST">
             <div class="forminside">
                 <h2>Sign Up </h2>
                 <div class="box"> 
@@ -53,7 +55,7 @@
                 </div>
                 <p class="red puff-in-center" id="msg"></p>
                 <div>
-                    <button class="btn_login" type="submit" value="Submit">Login</button>
+                    <button id="btn-signup" class="btn_login" type="submit" value="submit" name="submit">Sign Up</button>
                 </div>
                 <p>Alredy have an <a href="index.html">Account ?</a></p>
 
