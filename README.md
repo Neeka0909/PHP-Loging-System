@@ -7,4 +7,11 @@
 
 
 ## Use Tools 
-
+    - Microsoft Visual Studio Code.
+    - Xampp Server. (PhpMyAdmin and Apache Server)
+    
+## Setup Initiation
+### Option 1 - Start Local Server and  Create Database and Connect
+  - 
+    
+    
